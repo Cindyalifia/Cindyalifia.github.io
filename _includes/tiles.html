@@ -1,0 +1,72 @@
+{% if 'posts' == site.tiles-source %}
+    {% assign tiles = site.posts %}
+{% elsif 'pages' == site.tiles-source %}
+    {% assign tiles = site.html_pages | where_exp: "item", "item.show_tile != false" %}
+{% endif %}
+<section id="one" class="tiles">
+  <article>
+    <span class="image">
+      <!-- <img src="assets/images/pic11.jpg" alt="Collect" /> -->
+    </span>
+    <header class="major">
+      <h3>Collect</h3>
+      <p>I have experience working closely with the Product Team, and we have metrics to track our goals. One of the data sources we use is data from the event tracker. As data analysts, we know more about data and what we need to analyze those metrics. I took responsibility for Listing and setting up the events in <b>Google Tag Manager</b> and populated the data in <b>Google Analytics 4</b> and <b>BigQuery</b>.</p>
+    </header>
+  </article>
+
+  <article>
+    <span class="image">
+      <!-- <img src="assets/images/pic11.jpg" alt="Collect" /> -->
+    </span>
+    <header class="major">
+      <h3>Process</h3>
+      <p>
+        The data gathered through Google Analytics 4 is very <b>raw data</b>, we need to do some data <b>deduplication</b> and <b>data transformation</b> and collect it to the new dataset with <b>BigQuery</b> so the data is ready to use. Other tools I used for data processing are <b>Postgresql</b>, <b>Python</b>, and <b>MySql</b>.
+      </p>
+    </header>
+  </article>
+
+  <article>
+    <span class="image">
+      <!-- <img src="assets/images/pic11.jpg" alt="Collect" /> -->
+    </span>
+    <header class="major">
+      <h3>Predict</h3>
+      <p>
+        Involve in some other Data Analyst projects, I also have experience with building a model for conversion prediction and sentiment analysis. I build more than 30+ feature to build a model for conversion prediction. Also I untilize a user review to make a sentiment analysis. I will take top 5 negative sentiment, and bring up the issue to our product manager, so that we can fix user issue and concern while user our platform.
+      </p>
+    </header>
+  </article>
+
+  <article>
+    <span class="image">
+      <!-- <img src="assets/images/pic11.jpg" alt="Collect" /> -->
+    </span>
+    <header class="major">
+      <h3>Analyze</h3>
+      <p>As a Data Analyst who supports the product team and business team, I am involved a lot in <b>giving a recommendation</b> for the features we want to <b>build/improve/remove</b> from the analysis. Especially, when we did an <b>AB Test</b>, Our team will decide <b>how to implement</b> the AB Test, <b>how's the design</b>, and what is the <b>success metric</b>. After doing an analysis, I'll <b>present</b> the result of which feature is more performed and why. Then at the end, I'll give a <b>recommendation</b> based on the analysis result.</p>
+    </header>
+  </article>
+
+  <article>
+    <span class="image">
+      <!-- <img src="assets/images/pic11.jpg" alt="Collect" /> -->
+    </span>
+    <header class="major">
+      <h3>Visualize</h3>
+      <p>One of my experiences is to present and explain our data to make a non-data person understand what is happening to our company through data visualization. I have experience using <b>Tableau</b>, <b>Metabase</b>, and <b>Looker Studio</b> to present and visualize our data.</p>
+    </header>
+  </article>
+<!--   
+  {% for tile in tiles limit:site.tiles-count %}
+  <article>
+    <span class="image">
+      <img src="{{ tile.image }}" alt="{{ tile.title }}" />
+    </span>
+    <header class="major">
+      <h3><a href="{{ tile.url  | relative_url }}" class="link">{{ tile.title }}</a></h3>
+      <p>{{ tile.description }}</p>
+    </header>
+  </article>
+  {% endfor %} -->
+</section>
